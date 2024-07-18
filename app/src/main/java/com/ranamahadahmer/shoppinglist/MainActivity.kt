@@ -24,8 +24,4 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Composable
-@Preview(showSystemUi = true, device = Devices.PIXEL_6_PRO, showBackground = true)
-fun ProjectPreview() {
-    Project()
-}
+
