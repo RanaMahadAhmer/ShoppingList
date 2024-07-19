@@ -50,7 +50,10 @@ fun AddItem(itemDialog: MutableState<Boolean>,
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Button(onClick = { itemDialog.value = false }) {
+                    Button(onClick = {
+                        itemDialog.value = false
+                        editingItem.value = null
+                    }) {
                         Text(text = "Cancel")
                     }
                     Button(onClick = addClick) {
