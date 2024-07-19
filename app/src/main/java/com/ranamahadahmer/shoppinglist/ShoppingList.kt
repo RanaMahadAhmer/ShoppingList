@@ -50,21 +50,6 @@ fun Project() {
     var itemDialog by remember { mutableStateOf(false) }
     var editingItem by remember { mutableStateOf<Item?>(null) }
 
-
-
-    itemsList.add(Item(1, "I am Mahad", 0))
-    itemsList.add(Item(1, "I am Mahad", 2))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-    itemsList.add(Item(1, "I am Mahad", 1))
-
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
@@ -134,6 +119,7 @@ fun Project() {
             }
 
             AlertDialog(
+                title = { Text(text = "Shopping Item") },
                 onDismissRequest = {
                     itemDialog = false
                     editingItem = null
